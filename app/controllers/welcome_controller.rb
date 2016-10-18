@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
               params[:thing].capitalize
             else
               'nameless'
-            end
+    end
   end
 
   def lorem
@@ -24,5 +24,6 @@ class WelcomeController < ApplicationController
     else
       @ipsum = 'Please choose from standard, sam or hipster'
     end
+    @paragraphs = (params[:paragraphs] || 1).to_i
   end
 end
